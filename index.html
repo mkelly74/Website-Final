@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaKenna Kelly</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ea0706e43d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Computational Media Student</p>
+                <h1>Hi, I'm <span>MaKenna</span><br>Kelly</h1>
+            </div>
+        </div>
+    </div>
+    <!---------------------about----------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I am MaKenna Kelly, an undergraduate student at Georgia Tech 
+                        studying Computational Media. I am working to gain both 
+                        theoretical and hands-on computing knowledge as well as an 
+                        understanding of visual design and media. I am passionate 
+                        about UI and UX design and transforming technology to be more 
+                        accessible to everyone.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br>Java, Python, HTML, CSS, Javascript</li>
+                            <li><span>Software</span><br>Github, InDesign, Photoshop</li>
+                            <li><span>Communication</span><br>Grpahic Design, Email, Slack, Microsoft Office, Google Drive</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Current</span><br>Information Desk Attendant</li>
+                            <li><span>2021</span><br>Sales Associate</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024</span><br>BS in Computational Media from Georgia Institute of Technology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------------interests----------------------------->
+    <div id="interests">
+        <div class="container">
+            <h1 class="sub-title">My Interests</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-yarn"></i>
+                    <h2>Crochet</h2>
+                    <p> I enjoymaking tops, coasters, water bottle holders, 
+                        baskets, and many more projects. </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-paintbrush"></i>
+                    <h2>Painting</h2>
+                    <p> I enjoy painting pet portraits and landscapes to relax. </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-music"></i>
+                    <h2>Music</h2>
+                    <p> I like to both listen to music and play instruments. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------portfolio---------------------------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Apartment 404</h3>
+                        <p>An interactive story-based atmospheric horror game.</p>
+                        <a href= "https://ayang351.github.io/Apartment404Game/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>Twitterbot</h3>
+                        <p>An Animal Crossing New Horizons themed twitterbot.</p>
+                        <a href= "https://twitter.com/weloveacnh"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------contact---------------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i>mkelly74@gatech.edu</p>
+                    <p><i class="fa-solid fa-phone"></i>404-844-8688</p>
+                    <a href="images/Resume Fall 22.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwaJI49MW8RpEjpIohQ5g-7WI_TRk5Qd80IV1B7WVE5zS1tLjIIb-UrXnSt7NW5Slti/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message Sent Successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
